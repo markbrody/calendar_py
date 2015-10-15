@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: Helvetica, sans-serif;
+}
+
+#calendar {
+  margin: auto;
+  width: 100%;
+  max-width: 1000px;
+  padding: 0;
+  padding-left: 5px;
+}
+
+#title {
+  text-align: center;
+  padding: 0px 20px;
+}
+
+.day, .label {
+  width: 12.8%;
+  margin: 1px;
+  float: left;
+}
+
+.label {
+  padding: 1px 1px 10px 1px;
+  text-align: center;
+}
+
+.day {
+  height: 12.5vh;
+  border: 1px solid #999;
+}
+
+.day p {
+  margin: 7px;
+}
+
+.previous, .next {
+  width: 5vh;
+  background: #fff;
+  border: 1px solid #999;
+  font-size: 1.4em;
+  -webkit-appearance: none;
+  border-radius: 0px;
+}
+
+.previous {
+  float: left;
+}
+
+.next {
+  float: right;
+}
+
+.empty {
+  border: none;
+  padding: 1px;
+}
+
+.arrive {
+  background: -webkit-linear-gradient(left, #fff, #cde);
+  background: -o-linear-gradient(right, #fff, #cde);
+  background: -moz-linear-gradient(right, #fff, #cde);
+  background: linear-gradient(to right, #fff, #cde);
+}
+
+.depart {
+  background: -webkit-linear-gradient(right, #fff, #cde);
+  background: -o-linear-gradient(left, #fff, #cde);
+  background: -moz-linear-gradient(left, #fff, #cde);
+  background: linear-gradient(to left, #fff, #cde);
+}
+
+.home {
+  background: #cde;
+}
+
+.away {
+  background: #fff;
+}
+
+.today {
+  color : #f66;
+  border: 1px solid #f66;
+}
+

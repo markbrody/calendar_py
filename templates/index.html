@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block refresh %}
+{% if False %}
+<meta tag here>
+{% endif %}
+{% endblock refresh %}
+
+{% block title %}{{ calendar.title }}{% endblock title %}
+
+{% block calendar %}
+  <div id="calendar">
+
+    <div id="title">
+      <button class="previous" onclick="window.location.href='/?year=&month=';"><!--&laquo;--></button>
+      <button class="next" onclick="window.location.href='/?year=&month=';"><!--&raquo;--></button>
+      <h1>{{ calendar.title }}</h1>
+      <br>
+    </div>
+
+    <div class="label">Su</div>
+    <div class="label">M</div>
+    <div class="label">Tu</div>
+    <div class="label">W</div>
+    <div class="label">Th</div>
+    <div class="label">F</div>
+    <div class="label">Sa</div>
+
+{% for day in calendar.days %}
+{% if not day %}
+    <div class="day empty"></div>
+{% else %}
+    <div class="day{% if day == calendar.today %}' today'{% endif %}"><p>{{ day }}</p></div>
+{% endif %}
+{% endfor %}
+
+  </div>
+{% endblock calendar%}
+
